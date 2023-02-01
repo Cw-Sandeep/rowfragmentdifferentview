@@ -12,6 +12,7 @@ import androidx.leanback.widget.ClassPresenterSelector;
 import androidx.leanback.widget.FocusHighlight;
 import androidx.leanback.widget.ListRow;
 import androidx.leanback.widget.ListRowPresenter;
+import androidx.leanback.widget.PresenterSelector;
 
 import android.util.Base64;
 import android.util.Log;
@@ -31,7 +32,7 @@ public class TitleFragment extends RowsSupportFragment {
     }
     @SuppressLint("UseCompatLoadingForDrawables")
     private void loadTitle() {
-        ClassPresenterSelector classPresenterSelector = new ClassPresenterSelector();
+        CardPresenterSelector presenterSelector = new ClassPresenterSelector();
         ListRowPresenter listRowPresenter = new ListRowPresenter(FocusHighlight.ZOOM_FACTOR_NONE, false);
         ArrayObjectAdapter listRowsAdapter = new ArrayObjectAdapter(listRowPresenter);
         TitlePresenter titlePresenter = new TitlePresenter();
